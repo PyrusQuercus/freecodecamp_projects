@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <title>Caffeine Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Caffeinated Drinks Survey Form</h1>
+      <p id="description">Let us know which beverage is the programmer's power-up!</p> 
+    </header>
+    <main>
+      <form method="post" action="https://register-demo.freecodecamp.org" id="survey-form">
+        <!-- identifying info -->
+        <fieldset>
+          <label id="name-label">Your first name: 
+            <input id="name" name="name" type="text" placeholder="Leeroy" required/>
+          </label>
+          <label for="surname">Your last name: 
+            <input id="surname" name="surname" type="text" placeholder="Jenkins" required/>
+          </label>
+          <label id="email-label">Your e-mail address:
+            <input id="email" name="email" type="email" placeholder="username@domain.com" required/>
+          </label>
+        </fieldset>
+        <!-- start of questionnaire -->
+        <fieldset>
+          <p>Are you Team Coffee or Team Tea?</p>
+          <label for="t-coffee">
+            <input id="t-coffee" name="team" type="radio" value="t-coffee" checked/>Team Coffee
+          </label>
+          <label for="t-tea">
+            <input id="t-tea" name="team" type="radio" value="t-tea"/>Team Tea
+          </label>
+        </fieldset>
+        <!-- choose your beverages -->
+        <fieldset>
+          <p>Choose your favourite beverages <span>(select as many as you want!)</span></p>
+          <!--   coffees   -->
+          <article class="coffee">
+            <label for="espresso">
+              <input id="espresso" name="espresso" value="espresso" type="checkbox"/>Espresso
+            
+            </label>
+            <label for="latte">
+              <input id="latte" name="latte" value="latte" type="checkbox"/>Latte
+            </label>
+            <label for="cappuccino">
+              <input id="cappuccino" name="cappuccino" value="cappuccino" type="checkbox"/>Cappuccino
+            </label>
+            <label for="macchiato">
+              <input id="macchiato" name="macchiato" value="macchiato" type="checkbox"/>Macchiato
+            </label>
+            <label for="iced">
+              <input id="iced" name="iced" value="iced" type="checkbox"/>Iced Coffee
+            </label>
+            <label for="mocha">
+              <input id="mocha" name="mocha" value="mocha" type="checkbox"/>Mocha
+            </label>   
+          </article>
+          <!--    teas    -->
+          <article class="tea">
+            <label for="matcha">
+              <input id="matcha" name="matcha" value="matcha" type="checkbox"/>Matcha
+            </label>
+            <label for="green-tea">
+              <input id="green-tea" name="green-tea" value="green-tea" type="checkbox"/>Green Tea
+            </label>
+            <label for="black-tea">
+              <input id="black-tea" name="black-tea" value="black-tea" type="checkbox"/>Black Tea
+            </label>
+            <label for="yerba-mate">
+              <input id="yerba-mate" name="yerba-mate" value="yerba-mate" type="checkbox"/>Yerba Mate
+            </label>
+            <label for="oolong-johnson">
+              <input id="oolong-johnson" name="oolong-johnson" value="oolong-johnson" type="checkbox"/>Oolong
+            </label>
+            <label for="silver-needle">
+              <input id="silver-needle" name="silver-needle" value="silver-needle" type="checkbox"/>Silver Needle
+            </label>
+          </article>
+        </fieldset>
+        <!--       cups per day        -->
+        <fieldset class="cupday">
+          <label id="number-label">How many cups do you drink per day?
+            <input id="number" type="number" name="cups" min="0" max="10" placeholder="no more than 10, we hope" />
+          </label>
+          <p class="warning">Be careful with the <a href="https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much" target="_blank"> daily amount of caffeine</a>.</p>     
+        </fieldset>
+        <fieldset>
+          <p>Additional info on your work routine</p>
+          <label for="dropdown">Your work level: 
+            <select id="dropdown" name="work-title">
+              <option disabled>--  select one --</option>
+              <option value="1">Intern</option>
+              <option value="2">Junior</option>
+              <option value="3">Mid-level</option>
+              <option value="4">Senior</option>
+              <option value="5">Lead</option>
+            </select>
+          </label>
+          <label for="workweek">Your work scale:
+            <select id="workweek" name="workweek">
+              <option disabled>--  select one --</option>
+              <option value="1">Full time</option>
+              <option value="2">Half time</option>
+            </select>
+          </label>
+        </fieldset>
+        <!-- suggestions -->
+        <fieldset>
+          <label for="suggestions"> Write here your beverage recipes if you have some really good ones and want to share :) <span>(optional)</span>
+            <textarea id="suggestions" name="suggestions" rows="5" cols="50" placeholder="Write here your fav recipe"></textarea>
+          </label>
+        </fieldset>    
+        <input id="submit" type="submit" value="Submit"/>
+      </form>
+    </main> 
+    <footer>
+      <p>No copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a> | Certification project @ 2023</p>
+    </footer>
+  </body>
+</html>
